@@ -115,11 +115,9 @@ const distConfig = baseConfig.clone()
             'scratch-gui': path.join(__dirname, 'src/index.ts')
         },
         output: {
-            // We need the public path to be relative, because of scratch-desktop and scratch-android
-            // - if the publicPath is static here (defaults to `/`), they are unable to load their assets,
-            // which depend on a relative path resolution.
-            // (e.g. `/tmp/*path-to-packaged-dist*/static/assets` in scratch-desktop)
-            publicPath: 'auto',
+            // Use absolute public path so Next.js serves assets from /static/assets/ and /chunks/
+            // (public/ folder) instead of relative to /_next/static/chunks/ which breaks on Vercel CDN.
+            publicPath: '/',
             path: path.resolve(__dirname, 'dist')
         }
     })
