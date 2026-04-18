@@ -112,8 +112,6 @@ const ariaMessages = defineMessages({
     }
 });
 
-const getScratchLogo = platform => (platform === PLATFORM.ANDROID ? scratchLogoAndroid : scratchLogo);
-
 const MenuBarItemTooltip = ({
     children,
     className,
@@ -275,8 +273,10 @@ class MenuBar extends React.Component {
                 document.getElementById('logo_img').src = oldtimeyLogo;
             } else if (mode === '220022BC') {
                 document.getElementById('logo_img').src = prehistoricLogo;
+            } else if (this.props.platform === PLATFORM.ANDROID){
+                document.getElementById('logo_img').src = scratchLogoAndroid;
             } else {
-                document.getElementById('logo_img').src = getScratchLogo(this.props.platform);
+                document.getElementById('logo_img').src = this.props.logo;
             }
 
             this.props.onSetTimeTravelMode(mode);
@@ -451,7 +451,7 @@ class MenuBar extends React.Component {
                                     [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                                 })}
                                 draggable={false}
-                                src={getScratchLogo(this.props.platform)}
+                                src={this.props.logo}
                                 onClick={this.props.onClickLogo}
                             />
                         </div>

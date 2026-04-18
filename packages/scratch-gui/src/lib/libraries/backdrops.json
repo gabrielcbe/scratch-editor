@@ -1,5 +1,55 @@
 [
     {
+        "name": "Campo-a",
+        "assetId": "1a000000000000000000000000000001",
+        "md5ext": "1a000000000000000000000000000001.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 480,
+        "rotationCenterY": 360,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Campo-b",
+        "assetId": "1a000000000000000000000000000002",
+        "md5ext": "1a000000000000000000000000000002.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 480,
+        "rotationCenterY": 360,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Grama",
+        "assetId": "1a000000000000000000000000000003",
+        "md5ext": "1a000000000000000000000000000003.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 480,
+        "rotationCenterY": 360,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Gelo",
+        "assetId": "123456789a1234567890123456789011",
+        "md5ext": "123456789a1234567890123456789011.png",
+        "dataFormat": "png",
+        "bitmapResolution": 2,
+        "rotationCenterX": 480,
+        "rotationCenterY": 360,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Mapa Sudeste",
+        "assetId": "123456789a1234567890123456789012",
+        "md5ext": "123456789a1234567890123456789012.png",
+        "dataFormat": "png",
+        "bitmapResolution": 2,
+        "rotationCenterX": 480,
+        "rotationCenterY": 360,
+        "tags": ["mindmakers"]
+    },
+    {
         "name": "Arctic",
         "assetId": "67e0db3305b3c8bac3a363b1c428892e",
         "md5ext": "67e0db3305b3c8bac3a363b1c428892e.png",

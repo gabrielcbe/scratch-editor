@@ -102,12 +102,13 @@ const getItemIcons = function (item) {
             uri: item.rawURL
         };
     }
+    const assetHost = process.env.ASSET_HOST || '/api/hosts/assets';
 
     if (item.assetId && item.dataFormat) {
         return {
             assetId: item.assetId,
             assetType: getAssetTypeForFileExtension(item.dataFormat),
-            assetServiceUri: `https://cdn.assets.scratch.mit.edu/internalapi/asset/${item.assetId}.${item.dataFormat}/get/`
+            assetServiceUri: `${assetHost}/internalapi/asset/${item.assetId}.${item.dataFormat}/get`
         };
     }
 
@@ -117,7 +118,7 @@ const getItemIcons = function (item) {
         return {
             assetId: assetId,
             assetType: getAssetTypeForFileExtension(fileExtension),
-            assetServiceUri: `https://cdn.assets.scratch.mit.edu/internalapi/asset/${md5ext}/get/`
+            assetServiceUri: `${assetHost}/internalapi/asset/${md5ext}/get`
         };
     }
 };
@@ -398,7 +399,7 @@ class LibraryComponent extends React.Component {
 
 LibraryComponent.propTypes = {
     data: PropTypes.arrayOf(
-         
+
         // An item in the library
         PropTypes.shape({
             // @todo remove md5/rawURL prop from library, refactor to use storage
@@ -409,7 +410,7 @@ LibraryComponent.propTypes = {
             ]),
             rawURL: PropTypes.string
         })
-         
+
     ),
     filterable: PropTypes.bool,
     withCategories: PropTypes.bool,

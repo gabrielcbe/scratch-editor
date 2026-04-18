@@ -1,5 +1,211 @@
 [
     {
+        "name": "Robogode Voando",
+        "tags": ["mindmakers"],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "name": "robogode-voando-a",
+                "assetId": "4665b62c89f43878d7c5026a70de41ea",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "4665b62c89f43878d7c5026a70de41ea.svg",
+                "rotationCenterX": 59,
+                "rotationCenterY": 36
+            },
+            {
+                "name": "robogode-voando-b",
+                "assetId": "43f6c25a5b140fd3e906094aa83d744d",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "43f6c25a5b140fd3e906094aa83d744d.svg",
+                "rotationCenterX": 46,
+                "rotationCenterY": 54
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "1000000000000000000000f000000001",
+                "name": "Hello",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 37376,
+                "md5ext": "1000000000000000000000f000000001.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
+        "name": "Robogode",
+        "tags": ["mindmakers"],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "name": "Robogode-a",
+                "assetId": "7a0a4977e05222226bd1bb6ffb7a47cb",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "7a0a4977e05222226bd1bb6ffb7a47cb.svg",
+                "rotationCenterX": 43,
+                "rotationCenterY": 67
+            },
+            {
+                "name": "robogode-b",
+                "assetId": "0211cbec30421e78d02daf3fe3aa3c3c",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "0211cbec30421e78d02daf3fe3aa3c3c.svg",
+                "rotationCenterX": 43,
+                "rotationCenterY": 67
+            },
+            {
+                "name": "robogode-c",
+                "assetId": "9fc052486ae26777676baa0330b81acb",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "9fc052486ae26777676baa0330b81acb.svg",
+                "rotationCenterX": 43,
+                "rotationCenterY": 67
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "1000000000000000000000f000000001",
+                "name": "Hello",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 37376,
+                "md5ext": "1000000000000000000000f000000001.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
+        "name": "Robolady",
+        "tags": ["mindmakers"],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "name": "Robolady-a",
+                "assetId": "c5b8b70bd1922557b7a2b9badbdc2d6b",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "c5b8b70bd1922557b7a2b9badbdc2d6b.svg",
+                "rotationCenterX": 46,
+                "rotationCenterY": 62
+            },
+            {
+                "name": "Robolady-b",
+                "assetId": "663334dbe0fab5737a2a370b535fb11e",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "663334dbe0fab5737a2a370b535fb11e.svg",
+                "rotationCenterX": 45,
+                "rotationCenterY": 64
+            },
+            {
+                "name": "Robolady-c",
+                "assetId": "9ba20497475e1d680c492653626377bf",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "9ba20497475e1d680c492653626377bf.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "1000000000000000000000f000000001",
+                "name": "Hello",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 37376,
+                "md5ext": "1000000000000000000000f000000001.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
+        "name": "CSBot1",
+        "tags": ["mindmakers"],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "name": "CsBot1-a",
+                "assetId": "92da015ba3225999d363a892e85d8fa0",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "92da015ba3225999d363a892e85d8fa0.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            },
+            {
+                "name": "CsBot1-b",
+                "assetId": "6305ec5709607f995c5ed089c41a6358",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "6305ec5709607f995c5ed089c41a6358.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            },
+            {
+                "name": "CsBot1-c",
+                "assetId": "a53c12a2aae8551ad7bd27b80579b10b",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "a53c12a2aae8551ad7bd27b80579b10b.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            }
+        ],
+        "sounds": [],
+        "blocks": {}
+    },
+    {
+        "name": "CSBot2",
+        "tags": ["mindmakers"],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "name": "CsBot2-a",
+                "assetId": "22769f7899ec607ac8a43d0e42e69db5",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "22769f7899ec607ac8a43d0e42e69db5.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            },
+            {
+                "name": "CsBot2-b",
+                "assetId": "254017b5a8206d77c02f1ec616ac20ba",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "254017b5a8206d77c02f1ec616ac20ba.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            },
+            {
+                "name": "CsBot2-c",
+                "assetId": "75b9a6c60d1bfaf3074f4f13d4f2aa8a",
+                "bitmapResolution": 1,
+                "dataFormat": "svg",
+                "md5ext": "75b9a6c60d1bfaf3074f4f13d4f2aa8a.svg",
+                "rotationCenterX": 34,
+                "rotationCenterY": 60
+            }
+        ],
+        "sounds": [],
+        "blocks": {}
+    },
+    {
         "name": "Abby",
         "tags": [
             "people",

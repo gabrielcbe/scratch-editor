@@ -1,5 +1,145 @@
 [
     {
+        "name": "Robogode-voando-a",
+        "assetId": "4665b62c89f43878d7c5026a70de41ea",
+        "md5ext": "4665b62c89f43878d7c5026a70de41ea.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 59,
+        "rotationCenterY": 36,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robogode-voando-b",
+        "assetId": "43f6c25a5b140fd3e906094aa83d744d",
+        "md5ext": "43f6c25a5b140fd3e906094aa83d744d.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 46,
+        "rotationCenterY": 54,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robogode-a",
+        "assetId": "7a0a4977e05222226bd1bb6ffb7a47cb",
+        "md5ext": "7a0a4977e05222226bd1bb6ffb7a47cb.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 43,
+        "rotationCenterY": 67,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robogode-b",
+        "assetId": "0211cbec30421e78d02daf3fe3aa3c3c",
+        "md5ext": "0211cbec30421e78d02daf3fe3aa3c3c.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 43,
+        "rotationCenterY": 67,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robogode-c",
+        "assetId": "9fc052486ae26777676baa0330b81acb",
+        "md5ext": "9fc052486ae26777676baa0330b81acb.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 43,
+        "rotationCenterY": 67,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robolady-a",
+        "assetId": "c5b8b70bd1922557b7a2b9badbdc2d6b",
+        "md5ext": "c5b8b70bd1922557b7a2b9badbdc2d6b.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 46,
+        "rotationCenterY": 64,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robolady-b",
+        "assetId": "663334dbe0fab5737a2a370b535fb11e",
+        "md5ext": "663334dbe0fab5737a2a370b535fb11e.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 46,
+        "rotationCenterY": 64,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "Robolady-c",
+        "assetId": "9ba20497475e1d680c492653626377bf",
+        "md5ext": "9ba20497475e1d680c492653626377bf.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "CsBot1-a",
+        "assetId": "92da015ba3225999d363a892e85d8fa0",
+        "md5ext": "92da015ba3225999d363a892e85d8fa0.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "CsBot1-b",
+        "assetId": "6305ec5709607f995c5ed089c41a6358",
+        "md5ext": "6305ec5709607f995c5ed089c41a6358.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "CsBot1-c",
+        "assetId": "a53c12a2aae8551ad7bd27b80579b10b",
+        "md5ext": "a53c12a2aae8551ad7bd27b80579b10b.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "CsBot2-a",
+        "assetId": "22769f7899ec607ac8a43d0e42e69db5",
+        "md5ext": "22769f7899ec607ac8a43d0e42e69db5.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "CsBot2-b",
+        "assetId": "254017b5a8206d77c02f1ec616ac20ba",
+        "md5ext": "254017b5a8206d77c02f1ec616ac20ba.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
+        "name": "CsBot2-c",
+        "assetId": "75b9a6c60d1bfaf3074f4f13d4f2aa8a",
+        "md5ext": "75b9a6c60d1bfaf3074f4f13d4f2aa8a.svg",
+        "dataFormat": "svg",
+        "bitmapResolution": 1,
+        "rotationCenterX": 34,
+        "rotationCenterY": 60,
+        "tags": ["mindmakers"]
+    },
+    {
         "name": "Abby-a",
         "assetId": "809d9b47347a6af2860e7a3a35bce057",
         "md5ext": "809d9b47347a6af2860e7a3a35bce057.svg",

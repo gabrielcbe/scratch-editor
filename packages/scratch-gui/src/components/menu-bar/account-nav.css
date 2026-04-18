@@ -20,16 +20,33 @@
 }
 
 [dir="ltr"] .user-info .avatar-wrapper {
-    margin-right: calc($space * .8125);
-}
-
-[dir="rtl"] .user-info .avatar-wrapper {
     margin-left: calc($space * .8125);
 }
 
+[dir="rtl"] .user-info .avatar-wrapper {
+    margin-right: calc($space * .8125);
+}
+
 .user-info .avatar {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.4rem 0.4rem 0.1rem 0.4rem;
+    background-size: cover;
+}
+
+.user-info .name-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.user-info .student-level {
+    display: block;
+    font-size: 12px;
+    opacity: .7;
 }
 
 [dir="ltr"] .user-info .dropdown-caret-position {

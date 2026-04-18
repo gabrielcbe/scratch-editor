@@ -125,5 +125,10 @@ export default defineMessages({
         defaultMessage: 'Letters',
         description: 'Tag for filtering a library for letters',
         id: 'gui.libraryTags.letters'
+    },
+    mindmakers: {
+        defaultMessage: 'Mindmakers',
+        description: 'Tag for filtering a library for mindmakers',
+        id: 'gui.libraryTags.mindmakers'
     }
 });

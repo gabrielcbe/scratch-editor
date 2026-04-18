@@ -1,10 +1,10 @@
 import {defineMessages} from 'react-intl';
 
 const messages = defineMessages({
-    meow: {
-        defaultMessage: 'Meow',
-        description: 'Name for the meow sound',
-        id: 'gui.defaultProject.meow'
+    hello: {
+        defaultMessage: 'Hello',
+        description: 'Name for the hello sound',
+        id: 'gui.defaultProject.hello'
     },
     variable: {
         defaultMessage: 'my variable',

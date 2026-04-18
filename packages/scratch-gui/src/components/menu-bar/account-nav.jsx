@@ -32,7 +32,8 @@ const AccountNavComponent = ({
     myClassUrl,
     accountSettingsUrl,
     username,
-    avatarBadge
+    avatarBadge,
+    currentClass
 }) => (
     <React.Fragment>
         <div
@@ -42,6 +43,20 @@ const AccountNavComponent = ({
             )}
             onClick={onClick}
         >
+            <div className={styles.nameContainer}>
+                <span className={styles.profileName}>
+                    {username}
+                </span>
+                {currentClass ? <span className={styles.studentLevel}>
+                    {currentClass}
+                </span> : null}
+            </div>
+            <div className={styles.dropdownCaretPosition}>
+                <img
+                    className={styles.dropdownCaretIcon}
+                    src={dropdownCaret}
+                />
+            </div>
             {avatarUrl ? (
                 <UserAvatar
                     className={styles.avatar}
@@ -50,15 +65,6 @@ const AccountNavComponent = ({
                     showAvatarBadge={!!avatarBadge}
                 />
             ) : null}
-            <span className={styles.profileName}>
-                {username}
-            </span>
-            <div className={styles.dropdownCaretPosition}>
-                <img
-                    className={styles.dropdownCaretIcon}
-                    src={dropdownCaret}
-                />
-            </div>
         </div>
         <MenuBarMenu
             className={menuBarMenuClassName}
@@ -147,6 +153,7 @@ AccountNavComponent.propTypes = {
 
     username: PropTypes.string,
     avatarBadge: PropTypes.number,
+    currentClass: PropTypes.string,
 
     avatarUrl: PropTypes.string,
     myStuffUrl: PropTypes.string,
