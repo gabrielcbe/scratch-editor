@@ -51,7 +51,7 @@ const baseConfig = new ScratchWebpackConfigBuilder(
                 Buffer: require.resolve('buffer/'),
                 stream: require.resolve('stream-browserify')
             },
-            symlinks: false
+            symlinks: true
         }
     })
     .addModuleRule({
@@ -68,11 +68,11 @@ const baseConfig = new ScratchWebpackConfigBuilder(
     .addPlugin(new CopyWebpackPlugin({
         patterns: [
             {
-                from: '../../node_modules/scratch-blocks/media',
+                from: path.resolve(__dirname, 'node_modules/scratch-blocks/media'),
                 to: 'static/blocks-media/default'
             },
             {
-                from: '../../node_modules/scratch-blocks/media',
+                from: path.resolve(__dirname, 'node_modules/scratch-blocks/media'),
                 to: 'static/blocks-media/high-contrast'
             },
             {
@@ -83,22 +83,22 @@ const baseConfig = new ScratchWebpackConfigBuilder(
                 force: true
             },
             {
-                context: '../../node_modules/@scratch/scratch-vm/dist/web',
+                context: path.resolve(__dirname, 'node_modules/@scratch/scratch-vm/dist/web'),
                 from: 'extension-worker.{js,js.map}',
                 noErrorOnMissing: true
             },
             {
-                context: '../../node_modules/scratch-storage/dist/web',
+                context: path.resolve(__dirname, 'node_modules/scratch-storage/dist/web'),
                 from: 'chunks/fetch-worker.*.{js,js.map}',
                 noErrorOnMissing: true
             },
             {
-                context: '../../node_modules/scratch-storage/dist/web',
+                context: path.resolve(__dirname, 'node_modules/scratch-storage/dist/web'),
                 from: 'chunks/vendors-*.{js,js.map}',
                 noErrorOnMissing: true
             },
             {
-                from: '../../node_modules/@mediapipe/face_detection',
+                from: path.resolve(__dirname, 'node_modules/@mediapipe/face_detection'),
                 to: 'chunks/mediapipe/face_detection'
             }
         ]

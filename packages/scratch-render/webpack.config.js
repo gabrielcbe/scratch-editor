@@ -11,7 +11,8 @@ const baseConfig = new ScratchWebpackConfigBuilder({
     .merge({
         resolve: {
             fallback: {
-                Buffer: require.resolve('buffer/')
+                Buffer: require.resolve('buffer/'),
+                events: require.resolve('events')
             }
         }
     });

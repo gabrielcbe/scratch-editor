@@ -54,7 +54,8 @@
     "allow-incomplete-coverage": true
   },
   "dependencies": {
-    "@scratch/scratch-svg-renderer": "13.4.0",
+    "@scratch/scratch-svg-renderer": "workspace:*",
+    "events": "^3.3.0",
     "grapheme-breaker": "0.3.2",
     "hull.js": "0.2.10",
     "ify-loader": "1.1.0",

@@ -48,6 +48,7 @@
     "TRADEMARK"
   ],
   "scripts": {
+    "dev": "BUILD_TYPE=dev webpack --watch",
     "build": "npm run clean && npm run build:dev && npm run build:dist && npm run build:dist-standalone",
     "build:dev": "BUILD_TYPE=dev webpack",
     "build:dist": "cross-env NODE_ENV=production BUILD_TYPE=dist webpack",
@@ -127,9 +128,9 @@
     "@mediapipe/face_detection": "0.4.1646425229",
     "@microbit/microbit-universal-hex": "0.2.2",
     "@radix-ui/react-context-menu": "2.2.16",
-    "@scratch/scratch-render": "13.4.0",
-    "@scratch/scratch-svg-renderer": "13.4.0",
-    "@scratch/scratch-vm": "13.4.0",
+    "@scratch/scratch-render": "workspace:*",
+    "@scratch/scratch-svg-renderer": "workspace:*",
+    "@scratch/scratch-vm": "workspace:*",
     "@tensorflow-models/face-detection": "1.0.3",
     "@tensorflow/tfjs": "4.22.0",
     "@testing-library/user-event": "14.6.1",
@@ -167,6 +168,7 @@
     "prop-types": "15.8.1",
     "query-string": "5.1.1",
     "raw-loader": "4.0.2",
+    "regenerator-runtime": "0.13.11",
     "react-draggable": "3.3.2",
     "react-ga": "3.3.1",
     "react-intl": "6.8.9",

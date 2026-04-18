@@ -60,8 +60,12 @@
     "allow-incomplete-coverage": true
   },
   "dependencies": {
-    "@scratch/scratch-render": "13.4.0",
-    "@scratch/scratch-svg-renderer": "13.4.0",
+    "@mediapipe/face_detection": "0.4.1646425229",
+    "@scratch/scratch-render": "workspace:*",
+    "@tensorflow-models/face-detection": "1.0.3",
+    "@tensorflow/tfjs": "4.22.0",
+    "events": "^3.3.0",
+    "@scratch/scratch-svg-renderer": "workspace:*",
     "@vernier/godirect": "1.8.3",
     "arraybuffer-loader": "1.0.8",
     "atob": "2.1.2",

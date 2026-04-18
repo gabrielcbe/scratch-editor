@@ -30,7 +30,8 @@ const webBuilder = new ScratchWebpackConfigBuilder(common)
         },
         resolve: {
             fallback: {
-                Buffer: require.resolve('buffer/')
+                Buffer: require.resolve('buffer/'),
+                events: require.resolve('events')
             }
         },
         output: {
@@ -139,7 +140,6 @@ const playgroundBuilder = webBuilder
     );
 
 module.exports = [
-    playgroundBuilder.get(), // webpack-dev-server only looks at the first configuration
     nodeBuilder.get(),
     webBuilder.get()
 ];
