@@ -415,6 +415,72 @@ test('move - attaching new shadow', t => {
     t.end();
 });
 
+test('move out of input with shadow clears parent', t => {
+    const b = new Blocks(new Runtime());
+    // Create a stack block with an input that has a shadow
+    b.createBlock({
+        id: 'stack',
+        opcode: 'TEST_BLOCK',
+        next: null,
+        parent: null,
+        fields: {},
+        inputs: {
+            myInput: {
+                name: 'myInput',
+                block: 'myShadow',
+                shadow: 'myShadow'
+            }
+        },
+        topLevel: true
+    });
+    b.createBlock({
+        id: 'myShadow',
+        opcode: 'TEST_SHADOW',
+        next: null,
+        parent: 'stack',
+        fields: {},
+        inputs: {},
+        shadow: true
+    });
+    b.createBlock({
+        id: 'reporter',
+        opcode: 'TEST_REPORTER',
+        next: null,
+        parent: null,
+        fields: {},
+        inputs: {},
+        topLevel: true
+    });
+
+    // Move the reporter into the stack's input (covering the shadow)
+    b.moveBlock({
+        id: 'reporter',
+        newParent: 'stack',
+        newInput: 'myInput'
+    });
+    t.equal(b._blocks.reporter.parent, 'stack');
+    t.equal(b.getTopLevelScript('reporter'), 'stack');
+
+    // Detach the reporter from the stack's input
+    b.moveBlock({
+        id: 'reporter',
+        oldParent: 'stack',
+        oldInput: 'myInput',
+        newCoordinate: {x: 100, y: 100}
+    });
+
+    // The shadow should be restored
+    t.equal(b._blocks.stack.inputs.myInput.block, 'myShadow');
+
+    // The reporter's parent must be cleared so it is its own top-level script
+    t.equal(b._blocks.reporter.parent, null,
+        'reporter parent should be null after disconnect');
+    t.equal(b.getTopLevelScript('reporter'), 'reporter',
+        'reporter should be its own top-level script after disconnect');
+
+    t.end();
+});
+
 test('change', t => {
     const b = new Blocks(new Runtime());
     b.createBlock({
@@ -468,6 +534,47 @@ test('change', t => {
         value: 'final-value'
     });
     t.equal(b._blocks.foo.fields.someField.value, 'final-value');
+
+    t.end();
+});
+
+test('block_field_intermediate_change updates field value', t => {
+    const rt = new Runtime();
+    rt.addTarget({
+        id: 'target1',
+        isStage: true,
+        blocks: new Blocks(rt, true),
+        variables: {},
+        comments: {}
+    });
+    const b = new Blocks(rt);
+    b.createBlock({
+        id: 'foo',
+        opcode: 'TEST_BLOCK',
+        next: null,
+        fields: {
+            TEXT: {
+                name: 'TEXT',
+                value: 'Hello!'
+            }
+        },
+        inputs: {},
+        topLevel: true
+    });
+
+    t.equal(b._blocks.foo.fields.TEXT.value, 'Hello!');
+
+    // Simulate an intermediate field change (keystroke during editing)
+    b.blocklyListen({
+        type: 'block_field_intermediate_change',
+        blockId: 'foo',
+        name: 'TEXT',
+        oldValue: 'Hello!',
+        newValue: 'Hello world'
+    });
+
+    t.equal(b._blocks.foo.fields.TEXT.value, 'Hello world',
+        'field value should update on intermediate change');
 
     t.end();
 });

@@ -160,6 +160,8 @@ const GUIComponent = props => {
         loading,
         logo,
         manuallySaveThumbnails,
+        onSetManualThumbnail,
+        onSetManualThumbnailButtonClick,
         menuBarHidden,
         renderLogin,
         onClickAbout,
@@ -191,6 +193,7 @@ const GUIComponent = props => {
         onTelemetryModalOptOut,
         onUpdateProjectThumbnail,
         showComingSoon,
+        showNewFeatureCallouts,
         soundsTabVisible,
         stageSizeMode,
         targetIsStage,
@@ -260,11 +263,6 @@ const GUIComponent = props => {
                 isRendererSupported={isRendererSupported}
                 isRtl={isRtl}
                 loading={loading}
-                manuallySaveThumbnails={
-                    manuallySaveThumbnails &&
-                    userOwnsProject
-                }
-                onUpdateProjectThumbnail={onUpdateProjectThumbnail}
                 stageSize={STAGE_SIZE_MODES.large}
                 vm={vm}
             >
@@ -542,10 +540,19 @@ const GUIComponent = props => {
                                 isFullScreen={isFullScreen}
                                 isRendererSupported={isRendererSupported}
                                 isRtl={isRtl}
+                                isCreating={isCreating}
                                 stageSize={stageSize}
                                 vm={vm}
                                 ariaRole="region"
                                 ariaLabel={intl.formatMessage(ariaMessages.stage)}
+                                manuallySaveThumbnails={manuallySaveThumbnails}
+                                onSetManualThumbnail={onSetManualThumbnail}
+                                onSetManualThumbnailButtonClick={onSetManualThumbnailButtonClick}
+                                loading={loading}
+                                showNewFeatureCallouts={showNewFeatureCallouts}
+                                userOwnsProject={userOwnsProject}
+                                username={username}
+                                onUpdateProjectThumbnail={onUpdateProjectThumbnail}
                             />
                             <Box
                                 className={styles.targetWrapper}
@@ -614,6 +621,8 @@ GUIComponent.propTypes = {
     loading: PropTypes.bool,
     logo: PropTypes.string,
     manuallySaveThumbnails: PropTypes.bool,
+    onSetManualThumbnail: PropTypes.func,
+    onSetManualThumbnailButtonClick: PropTypes.func,
     menuBarHidden: PropTypes.bool,
     onActivateCostumesTab: PropTypes.func,
     onActivateSoundsTab: PropTypes.func,
