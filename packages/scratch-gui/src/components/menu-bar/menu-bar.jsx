@@ -740,6 +740,7 @@ class MenuBar extends React.Component {
                             </span>
                         </div>
                     </div>
+                    {this.props.networkButton}
                 </div>
 
                 {/* show the proper UI in the account menu, given whether the user is
@@ -992,6 +993,8 @@ MenuBar.propTypes = {
     userOwnsProject: PropTypes.bool,
 
     accountMenuOptions: AccountMenuOptionsPropTypes,
+
+    networkButton: PropTypes.node,
 
     vm: PropTypes.instanceOf(VM).isRequired
 };

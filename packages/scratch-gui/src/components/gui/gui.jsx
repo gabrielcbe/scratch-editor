@@ -141,6 +141,7 @@ const GUIComponent = props => {
         canShare,
         canUseCloud,
         children,
+        networkButton,
         connectionModalVisible,
         costumeLibraryVisible,
         costumesTabVisible,
@@ -374,6 +375,7 @@ const GUIComponent = props => {
                         userOwnsProject={userOwnsProject}
                         username={username}
                         accountMenuOptions={accountMenuOptions}
+                        networkButton={networkButton}
                     />}
                     <Box className={classNames(boxStyles, styles.flexWrapper)}>
                         <Box
@@ -597,6 +599,7 @@ GUIComponent.propTypes = {
     canUseCloud: PropTypes.bool,
     cardsVisible: PropTypes.bool,
     children: PropTypes.node,
+    networkButton: PropTypes.node,
     costumeLibraryVisible: PropTypes.bool,
     costumesTabVisible: PropTypes.bool,
     debugModalVisible: PropTypes.bool,

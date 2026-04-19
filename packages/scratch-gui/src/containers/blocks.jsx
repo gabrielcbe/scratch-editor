@@ -188,6 +188,9 @@ class Blocks extends React.Component {
                 this.handleCategorySelected('faceSensing');
             });
         });
+
+        // Carrega automaticamente a extensão de eventos naturais WebRTC (mmNatureza)
+        this.props.vm.extensionManager.loadExtensionURL('mmNatureza').catch(() => {});
     }
     shouldComponentUpdate (nextProps, nextState) {
         return (
@@ -668,7 +671,7 @@ class Blocks extends React.Component {
             });
     }
     render () {
-         
+
         const {
             anyModalVisible,
             canUseCloud,
@@ -693,7 +696,7 @@ class Blocks extends React.Component {
             colorMode,
             ...props
         } = this.props;
-         
+
         return (
             <React.Fragment>
                 <DroppableBlocks
