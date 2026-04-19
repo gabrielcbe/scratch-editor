@@ -6,13 +6,8 @@ import VM from '@scratch/scratch-vm';
 import {LoadingState} from '../../../src/reducers/project-state';
 import CloudProvider from '../../../src/lib/cloud-provider';
 import {render} from '@testing-library/react';
-import {legacyConfig} from '../../../src/legacy-config';
-
 const mockCloudProviderInstance = {
     connection: true,
-    isConnectedOrConnecting () {
-        return !!this.connection;
-    },
     requestCloseConnection: jest.fn()
 };
 jest.mock('../../../src/lib/cloud-provider', () =>
@@ -30,7 +25,6 @@ describe('CloudManagerHOC', () => {
     beforeEach(() => {
         store = mockStore({
             scratchGui: {
-                config: legacyConfig,
                 projectState: {
                     projectId: '1234',
                     loadingState: LoadingState.SHOWING_WITH_ID
@@ -42,7 +36,6 @@ describe('CloudManagerHOC', () => {
         });
         stillLoadingStore = mockStore({
             scratchGui: {
-                config: legacyConfig,
                 projectState: {
                     projectId: '1234',
                     loadingState: LoadingState.LOADING_WITH_ID
