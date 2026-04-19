@@ -50,8 +50,8 @@ const StageSelector = props => {
         onBackdropFileUploadClick,
         onBackdropFileUpload,
         onClick,
-        onPointerEnter,
-        onPointerLeave,
+        onMouseEnter,
+        onMouseLeave,
         onNewBackdropClick,
         onSurpriseBackdropClick,
         onEmptyBackdropClick,
@@ -67,8 +67,8 @@ const StageSelector = props => {
             })}
             componentRef={containerRef}
             onClick={onClick}
-            onPointerEnter={onPointerEnter}
-            onPointerLeave={onPointerLeave}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
             {...componentProps}
         >
             <div className={styles.header}>
@@ -138,8 +138,8 @@ StageSelector.propTypes = {
     onBackdropFileUploadClick: PropTypes.func,
     onClick: PropTypes.func,
     onEmptyBackdropClick: PropTypes.func,
-    onPointerEnter: PropTypes.func,
-    onPointerLeave: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     onNewBackdropClick: PropTypes.func,
     onSurpriseBackdropClick: PropTypes.func,
     raised: PropTypes.bool.isRequired,

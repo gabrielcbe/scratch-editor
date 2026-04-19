@@ -143,8 +143,6 @@ GUI.propTypes = {
     isTotallyNormal: PropTypes.bool,
     loadingStateVisible: PropTypes.bool,
     manuallySaveThumbnails: PropTypes.bool,
-    onSetManualThumbnail: PropTypes.func,
-    onSetManualThumbnailButtonClick: PropTypes.func,
     onProjectLoaded: PropTypes.func,
     onSeeCommunity: PropTypes.func,
     onStorageInit: PropTypes.func,
