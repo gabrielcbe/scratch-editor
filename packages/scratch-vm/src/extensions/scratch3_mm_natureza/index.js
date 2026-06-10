@@ -374,6 +374,39 @@ class Scratch3MMNaturezaBlocks {
                         default: 'estação do ano',
                         description: 'Retorna a estação do ano atual do simulador'
                     })
+                },
+                '---',
+                // ── Comunicação remota ──────────────────────────────────────
+                {
+                    opcode: 'transmitaMsgRemota',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'mmNatureza.transmitaMsgRemota',
+                        default: 'transmita msg remota [COD_MSG]',
+                        description: 'Transmite uma mensagem remota via WebRTC para todos os peers da equipe'
+                    }),
+                    arguments: {
+                        COD_MSG: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'codMsg'
+                        }
+                    }
+                },
+                {
+                    opcode: 'quandoReceberMsgRemota',
+                    blockType: BlockType.HAT,
+                    text: formatMessage({
+                        id: 'mmNatureza.quandoReceberMsgRemota',
+                        default: 'quando receber msg remota [COD_MSG]',
+                        description: 'Dispara quando uma mensagem remota com o código especificado é recebida via WebRTC'
+                    }),
+                    isEdgeActivated: true,
+                    arguments: {
+                        COD_MSG: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'codMsg'
+                        }
+                    }
                 }
             ],
             menus: {
@@ -490,6 +523,29 @@ class Scratch3MMNaturezaBlocks {
 
     estacaoAtual () {
         return getEstacao();
+    }
+
+    // ── Comunicação remota ────────────────────────────────────────────────
+
+    transmitaMsgRemota (args) {
+        const codMsg = String(args.COD_MSG ?? '').trim().substring(0, 50);
+        if (!codMsg) return;
+        if (typeof window !== 'undefined' && typeof window.mmTransmitirMsgRemota === 'function') {
+            window.mmTransmitirMsgRemota(codMsg);
+        }
+    }
+
+    quandoReceberMsgRemota (args) {
+        const codMsg = String(args.COD_MSG ?? '').trim();
+        if (!codMsg) return false;
+        if (typeof window === 'undefined') return false;
+        const cache = window.mmEventosRecebidosWebRTC;
+        if (!(cache instanceof Map)) return false;
+        if (cache.has(codMsg)) {
+            cache.delete(codMsg);
+            return true;
+        }
+        return false;
     }
 }
 
