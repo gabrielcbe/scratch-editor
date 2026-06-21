@@ -140,13 +140,46 @@ class Scratch3MMNaturezaBlocks {
             id: Scratch3MMNaturezaBlocks.EXTENSION_ID,
             name: formatMessage({
                 id: 'mmNatureza.categoryName',
-                default: 'Natureza',
+                default: 'Rede MM',
                 description: 'Nome da categoria de blocos de eventos naturais WebRTC'
             }),
             color1: '#28a745',
             color2: '#1e7e34',
             color3: '#155724',
             blocks: [
+                // ── Comunicação remota ──────────────────────────────────────
+                {
+                    opcode: 'transmitaMsgRemota',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'mmNatureza.transmitaMsgRemota',
+                        default: 'transmita msg remota [COD_MSG]',
+                        description: 'Transmite uma mensagem remota via WebRTC para todos os peers da equipe'
+                    }),
+                    arguments: {
+                        COD_MSG: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'codMsg'
+                        }
+                    }
+                },
+                {
+                    opcode: 'quandoReceberMsgRemota',
+                    blockType: BlockType.HAT,
+                    text: formatMessage({
+                        id: 'mmNatureza.quandoReceberMsgRemota',
+                        default: 'quando receber msg remota [COD_MSG]',
+                        description: 'Dispara quando uma mensagem remota com o código especificado é recebida via WebRTC'
+                    }),
+                    isEdgeActivated: true,
+                    arguments: {
+                        COD_MSG: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'codMsg'
+                        }
+                    }
+                },
+                '---',
                 // ── Eventos (HAT) ───────────────────────────────────────────
                 {
                     opcode: 'quandoAmanhecer',
@@ -374,39 +407,6 @@ class Scratch3MMNaturezaBlocks {
                         default: 'estação do ano',
                         description: 'Retorna a estação do ano atual do simulador'
                     })
-                },
-                '---',
-                // ── Comunicação remota ──────────────────────────────────────
-                {
-                    opcode: 'transmitaMsgRemota',
-                    blockType: BlockType.COMMAND,
-                    text: formatMessage({
-                        id: 'mmNatureza.transmitaMsgRemota',
-                        default: 'transmita msg remota [COD_MSG]',
-                        description: 'Transmite uma mensagem remota via WebRTC para todos os peers da equipe'
-                    }),
-                    arguments: {
-                        COD_MSG: {
-                            type: ArgumentType.STRING,
-                            defaultValue: 'codMsg'
-                        }
-                    }
-                },
-                {
-                    opcode: 'quandoReceberMsgRemota',
-                    blockType: BlockType.HAT,
-                    text: formatMessage({
-                        id: 'mmNatureza.quandoReceberMsgRemota',
-                        default: 'quando receber msg remota [COD_MSG]',
-                        description: 'Dispara quando uma mensagem remota com o código especificado é recebida via WebRTC'
-                    }),
-                    isEdgeActivated: true,
-                    arguments: {
-                        COD_MSG: {
-                            type: ArgumentType.STRING,
-                            defaultValue: 'codMsg'
-                        }
-                    }
                 }
             ],
             menus: {
