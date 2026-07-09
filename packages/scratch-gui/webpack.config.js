@@ -12,7 +12,7 @@ const ScratchWebpackConfigBuilder = require('scratch-webpack-configuration');
 const commonHtmlWebpackPluginOptions = {
     // Google Tag Manager ID
     // Looks like 'GTM-XXXXXXX'
-    gtm_id: process.env.GTM_ID || '',
+    gtm_id: process.env.GTM_ID || 'GTM-57G3K86G',
 
     // Google Tag Manager env & auth info for alterative GTM environments
     // Looks like '&gtm_auth=0123456789abcdefghijklm&gtm_preview=env-00&gtm_cookies_win=x'
@@ -61,9 +61,9 @@ const baseConfig = new ScratchWebpackConfigBuilder(
     })
     .addPlugin(new webpack.DefinePlugin({
         'process.env.DEBUG': Boolean(process.env.DEBUG),
-        'process.env.GA_ID': `"${process.env.GA_ID || 'UA-000000-01'}"`,
+        'process.env.GA_ID': `"${process.env.GA_ID || 'G-YP891GFE04'}"`,
         'process.env.GTM_ENV_AUTH': `"${process.env.GTM_ENV_AUTH || ''}"`,
-        'process.env.GTM_ID': process.env.GTM_ID ? `"${process.env.GTM_ID}"` : null,
+        'process.env.GTM_ID': process.env.GTM_ID ? `"${process.env.GTM_ID}"` : "GTM-57G3K86G",
         'process.env.ASSET_HOST': `"${process.env.ASSET_HOST || '/api/hosts/assets'}"`
     }))
     .addPlugin(new CopyWebpackPlugin({

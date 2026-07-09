@@ -139,28 +139,28 @@
         "costumes": [
             {
                 "name": "CsBot1-a",
-                "assetId": "92da015ba3225999d363a892e85d8fa0",
+                "assetId": "03d69c821e44aebe55c5960771b4edc6",
                 "bitmapResolution": 1,
                 "dataFormat": "svg",
-                "md5ext": "92da015ba3225999d363a892e85d8fa0.svg",
+                "md5ext": "03d69c821e44aebe55c5960771b4edc6.svg",
                 "rotationCenterX": 34,
                 "rotationCenterY": 60
             },
             {
                 "name": "CsBot1-b",
-                "assetId": "6305ec5709607f995c5ed089c41a6358",
+                "assetId": "2cd4af42f3f6fde2427864b29051c130",
                 "bitmapResolution": 1,
                 "dataFormat": "svg",
-                "md5ext": "6305ec5709607f995c5ed089c41a6358.svg",
+                "md5ext": "2cd4af42f3f6fde2427864b29051c130.svg",
                 "rotationCenterX": 34,
                 "rotationCenterY": 60
             },
             {
                 "name": "CsBot1-c",
-                "assetId": "a53c12a2aae8551ad7bd27b80579b10b",
+                "assetId": "f8e981de15dbe2cafecb7eff7d1123e3",
                 "bitmapResolution": 1,
                 "dataFormat": "svg",
-                "md5ext": "a53c12a2aae8551ad7bd27b80579b10b.svg",
+                "md5ext": "f8e981de15dbe2cafecb7eff7d1123e3.svg",
                 "rotationCenterX": 34,
                 "rotationCenterY": 60
             }
@@ -176,28 +176,28 @@
         "costumes": [
             {
                 "name": "CsBot2-a",
-                "assetId": "22769f7899ec607ac8a43d0e42e69db5",
+                "assetId": "3e2330faac37d8f122564ebca78c6d0f",
                 "bitmapResolution": 1,
                 "dataFormat": "svg",
-                "md5ext": "22769f7899ec607ac8a43d0e42e69db5.svg",
+                "md5ext": "3e2330faac37d8f122564ebca78c6d0f.svg",
                 "rotationCenterX": 34,
                 "rotationCenterY": 60
             },
             {
                 "name": "CsBot2-b",
-                "assetId": "254017b5a8206d77c02f1ec616ac20ba",
+                "assetId": "59549f15afb007e4ad878ea6ea2a26e1",
                 "bitmapResolution": 1,
                 "dataFormat": "svg",
-                "md5ext": "254017b5a8206d77c02f1ec616ac20ba.svg",
+                "md5ext": "59549f15afb007e4ad878ea6ea2a26e1.svg",
                 "rotationCenterX": 34,
                 "rotationCenterY": 60
             },
             {
                 "name": "CsBot2-c",
-                "assetId": "75b9a6c60d1bfaf3074f4f13d4f2aa8a",
+                "assetId": "41e19b4f133304a5a0e7d78883b8431c",
                 "bitmapResolution": 1,
                 "dataFormat": "svg",
-                "md5ext": "75b9a6c60d1bfaf3074f4f13d4f2aa8a.svg",
+                "md5ext": "41e19b4f133304a5a0e7d78883b8431c.svg",
                 "rotationCenterX": 34,
                 "rotationCenterY": 60
             }
